@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+}
+body{
   background-color: rgb(17, 66, 66);
+
 }
 
 .container {
@@ -49,13 +52,7 @@ button:active {
   animation: pop 0.25s ease;
 }
 
-/* #incBtn:hover,
-#decBtn:hover,
-#resetBtn:hover {
-  background-color: rgb(17, 66, 66);
-  border: 2px solid burlywood;
-  color: burlywood;
-} */
+
 
 
 @keyframes pop {
@@ -63,25 +60,6 @@ button:active {
   50% { transform: scale(1.3); }
   100% { transform: scale(1); }
 }
-
-.fade {
-  animation: fadeIn 0.4s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-
 
 
 

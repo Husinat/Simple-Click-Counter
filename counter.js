@@ -61,7 +61,21 @@ animateCounter();
 })
 
 
+function animateCounter() {
+  startPoint.classList.remove('animate');
+  void startPoint.offsetWidth;
+  startPoint.classList.add('animate');
+}
 
+function showMessage(text, color) {
+  message.classList.remove('fade');
+  void message.offsetWidth;
+  message.classList.add('fade');
+
+  message.textContent = text;
+  message.style.color = color;
+}
+// showMessage('You are increasing 👍', 'green');
 
 
 
