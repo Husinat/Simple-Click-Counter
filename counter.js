@@ -6,10 +6,13 @@ let message = document.getElementById('msg');
 
 let count = 0;
 
+
 increaseBtn.addEventListener('click', function () {
     count++;
      startPoint.textContent = count;
     startPoint.style.color = 'green';
+    startPoint.textContent = count;
+ animateCounter();
 
 
     message.innerHTML = 'You are increasing 👍';
@@ -21,20 +24,26 @@ startPoint.textContent = count;
 
 
 decreaseBtn.addEventListener('click', function () {
+
+    if (count === 0) {
+    message.innerHTML = 'You can\'t go below 0';
+    message.style.color = 'red';
+    message.style.paddingTop = '10px';
+     message.style.fontSize = '30px';
+      return;
+    }
+    
     count--;
     startPoint.textContent = count;
     startPoint.style.color = 'red';
-
-
     message.innerHTML = 'You are decreasing 👎';
     message.style.color = 'red';
     message.style.paddingTop = '10px';
     message.style.fontSize = '30px';
+    startPoint.textContent = count;
+animateCounter();
 
-    if (count < 0) {
-    //   message.innerHTML = 'You can\'t go below 0';
-      return;
-    }
+
 
 })
 
@@ -47,8 +56,20 @@ resetBtn.addEventListener('click', () => {
     message.style.color = 'burlywood';
     message.style.paddingTop = '10px';
     message.style.fontSize = '30px';
+    startPoint.textContent = count;
+animateCounter();
 })
 
+
+
+
+
+
+
+
+
+
+// Testing post increment and pre-increment
 let x = 0;
 console.log(x++);
 x = x + 1;
